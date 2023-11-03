@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.ground {
+  background: #9b9a9a;
+  width: 100px;
+  height: 20px;
+  filter: blur(5px);
+  border-radius: 50%;
+}
+.ball {
+  z-index: 1;
+  background: rgb(214, 90, 90);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: relative;
+}
+.animate {
+  animation: bounce 3s infinite ease-in-out;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(13px);
+    height: 60px;
+    width: 80px;
+  }
+  50% {
+    transform: translateY(-100px);
+    height: 80px;
+  }
+  100% {
+    transform: translateY(13px);
+    height: 60px;
+    width: 80px;
+  }
+}
